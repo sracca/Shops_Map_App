@@ -17,4 +17,6 @@ export const BottomNavContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin: 0 -999rem;
+  padding: 0.25rem 999rem;
 `;
