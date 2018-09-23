@@ -14,4 +14,7 @@ export const BottomNavContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;

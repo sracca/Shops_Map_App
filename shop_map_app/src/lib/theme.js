@@ -9,6 +9,7 @@ export const colors = {
   white: "#ffffff",
   lightBeige: "#fbf1ed",
   lightBrown: "#b5a397",
+  brown: "#6a5750",
   darkBrown: "#30231d",
   red: "#963019",
   green: "#007849",
@@ -16,7 +17,8 @@ export const colors = {
 };
 
 export const fonts = {
-  arvo: "Arvo"
+  arvo: "Arvo",
+  lato: "Lato"
 };
 
 export const spacing = {};
