@@ -3,45 +3,46 @@ import PropTypes from "prop-types";
 import DownIcon from "../icons/DownIcon.png";
 import { BoxDiv, BoxTitle, ArrowIcon } from "../styles/components/check_list";
 import { fonts, fontSizes, colors } from "../lib/theme";
-
-const labelStyle = {
-  fontFamily: `${fonts.lato}, sans-serif`,
-  fontSize: `${fontSizes.regular}`,
-  color: `${colors.darkBrown}`
-};
-
-const CheckBox = ({ name }) => (
-  <BoxDiv style={{ display: "flex" }}>
-    <input type="checkbox" id={name} />
-    <label style={labelStyle} for={name}>
-      {name}
-    </label>
-  </BoxDiv>
-);
-
-CheckBox.PropTypes = {
-  name: PropTypes.string.isRequired
-};
+import Select from "react-select";
 
 export default class CheckList extends React.Component {
+  state = {
+    listOpen: false
+  };
   static propTypes = {
-    image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    filterList: PropTypes.arrayOf(PropTypes.string).isRequired
+    filterList: PropTypes.arrayOf(PropTypes.obj).isRequired,
+    multiOptions: PropTypes.bool.isRequired
+  };
+
+  handleTitleClick = () => {
+    this.setState({ listOpen: !this.state.listOpen });
   };
 
   render() {
-    const { image, title, filterList } = this.props;
+    const { title, filterList, multiOptions } = this.props;
+    const { listOpen } = this.state;
     return (
-      <div>
-        <div style={{ display: "flex" }}>
+      <div style={{ marginLeft: "30px" }}>
+        <div
+          style={{
+            display: "flex",
+            borderBottom: `1px solid ${colors.brown}`,
+            width: "300px"
+          }}
+          onClick={this.handleTitleClick}
+        >
           <BoxTitle>{title}</BoxTitle>
-          <ArrowIcon src={DownIcon} />
+          <ArrowIcon src={DownIcon} style={{ right: "0px" }} />
         </div>
-        <div>
-          {filterList.map(checkName => (
-            <CheckBox name={checkName} />
-          ))}
+        <div
+          style={
+            listOpen
+              ? { display: "block", paddingTop: "25px" }
+              : { display: "none", paddingTop: "25px" }
+          }
+        >
+          <Select options={filterList} isMulti={multiOptions} />
         </div>
       </div>
     );

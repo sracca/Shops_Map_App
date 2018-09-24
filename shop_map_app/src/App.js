@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import BottomBar from "./containers/bottom_bar";
-import FilterMenu from "./containers/filter_menu";
-import Sidebar from "./containers/side_bar";
+import SideMenu from "./containers/side_menu";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Sidebar />
-        {/* <FilterMenu /> */}
+        <SideMenu />
         <BottomBar />
       </div>
     );
