@@ -4,10 +4,12 @@ import { slide as Menu } from "react-burger-menu";
 import CheckList from "../components/filter_check";
 import { colors } from "../lib/theme";
 import { econCode, ethnicity, corp, twoAns } from "../constants/filter_lists";
-
+import TagList from "../components/filter_tag";
+import { fullList } from "../constants/goods_lists.js";
 const styles = {
   bmMenu: {
-    background: `${colors.lightBeige}`
+    background: `${colors.lightBeige}`,
+    paddingTop: "20px"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
@@ -36,35 +38,19 @@ export default class SideMenu extends React.Component {
           styles={styles}
         >
           <CheckList
+            style={{ paddingTop: "20px" }}
             title={"Economic Code"}
             filterList={econCode}
-            multiOptions={true}
           />
-          <CheckList
+          <TagList
             title={"Goods Sold"}
-            filterList={["todo"]}
-            multiOptions={false}
-          />
-          <CheckList
-            title={"Ethnicity"}
-            filterList={ethnicity}
+            filterList={fullList}
             multiOptions={true}
           />
-          <CheckList
-            title={"Ownership"}
-            filterList={corp}
-            multiOptions={false}
-          />
-          <CheckList
-            title={"Plateatici"}
-            filterList={twoAns}
-            multiOptions={false}
-          />
-          <CheckList
-            title={"Filter By Year"}
-            filterList={["todo"]}
-            multiOptions={false}
-          />
+          <CheckList title={"Ethnicity"} filterList={ethnicity} />
+          <CheckList title={"Ownership"} filterList={corp} />
+          <CheckList title={"Plateatici"} filterList={twoAns} />
+          <CheckList title={"Filter By Year"} filterList={["todo"]} />
         </Menu>
       </div>
     );
