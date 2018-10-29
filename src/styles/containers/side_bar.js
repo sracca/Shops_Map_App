@@ -9,11 +9,8 @@ export const SidebarDiv = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 10;
-<<<<<<< HEAD
-=======
   margin-top: -1rem;
   padding-top: 1.5rem;
->>>>>>> 664a5dc5f7c1f43544e667119e997d1e165c83a7
   right: 0px;
   background-color: ${colors.darkBrown};
   justify-content: center;
