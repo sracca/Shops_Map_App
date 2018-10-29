@@ -17,7 +17,11 @@ export const BottomNavContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
+<<<<<<< HEAD
   height: 50px;
+=======
+  height: 44px;
+>>>>>>> 664a5dc5f7c1f43544e667119e997d1e165c83a7
   margin: 0 -999rem;
   padding: 0.25rem 999rem;
 `;
