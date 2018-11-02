@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BottomBar from "./containers/bottom_bar";
 import SideMenu from "./containers/side_menu";
 import MapContainer from "./containers/map_container";
+import Intro_Menu from "./containers/intro_menu"
 
 const testStores = [
   {
@@ -25,11 +26,13 @@ class App extends Component {
     return (
       <div>
         <SideMenu />
+        <Intro_Menu isOpen={true}/>
         <MapContainer stores={testStores} />
         <BottomBar />
       </div>
     );
   }
 }
+  
 
-export default App;
+  export default App;
