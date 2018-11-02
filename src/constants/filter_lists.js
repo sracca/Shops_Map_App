@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-export const econCode = [
-  { key: 1, value: "bar", label: "Bar" },
-  { key: 2, value: "bed & breakfast", label: "Bed & Breakfast" },
-  { key: 3, value: "grocer", label: "Grocer" },
-  { key: 4, value: "hardware", label: "Hardware" },
-  { key: 5, value: "hotel", label: "Hotel" },
-  { key: 6, value: "supermarket", label: "Supermarket" },
-  { key: 7, value: "trinkets", label: "Trinkets" }
-];
-
-=======
->>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
 export const corp = [
   { key: 0, value: "person", label: "Person" },
   { key: 1, value: "corporation", label: "Corporation" }

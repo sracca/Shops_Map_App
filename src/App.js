@@ -2,28 +2,9 @@ import React, { Component } from "react";
 import BottomBar from "./containers/bottom_bar";
 import FilterMenu from "./containers/filter_menu";
 import MapContainer from "./containers/map_container";
-<<<<<<< HEAD
-import Intro_Menu from "./containers/intro_menu"
-
-const testStores = [
-  {
-    key: "a",
-    lat: 45.43492287,
-    lon: 12.33919474,
-    name: "Leather Goods Store"
-  },
-  {
-    key: "b",
-    lat: 45.43781593,
-    lon: 12.33657174,
-    name: "Gelateria"
-  }
-];
-=======
 import * as firebase from "firebase";
 import { initFire } from "./store/firebase";
 import { createYearList } from "./constants/year_lists";
->>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
 
 class App extends Component {
   state = {
@@ -56,14 +37,8 @@ class App extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        <SideMenu />
-        <Intro_Menu isOpen={true}/>
-        <MapContainer stores={testStores} />
-=======
         <FilterMenu />
         <MapContainer stores={this.state.currStores} />
->>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
         <BottomBar />
       </div>
     );
