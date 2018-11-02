@@ -9,21 +9,37 @@ const customSelect = {
   control: styles => ({
     ...styles,
     backgroundColor: `${colors.lightBeige}`,
+<<<<<<< HEAD
     width: "200px"
+=======
+    width: "275px"
+>>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     return {
       ...styles,
+<<<<<<< HEAD
       backgroundColor: `${colors.lightBeige}`,
       color: `${colors.darkBrown}`,
       cursor: isDisabled ? "not-allowed" : "default",
       fontFamily: `${fonts.lato}, sans-serif`
+=======
+      color: `${colors.darkBrown}`,
+      cursor: isDisabled ? "not-allowed" : "default",
+      fontFamily: `${fonts.lato}, sans-serif`,
+      width: "275px"
+>>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
     };
   },
   multiValue: (styles, { data }) => {
     return {
       ...styles,
+<<<<<<< HEAD
       backgroundColor: `${colors.darkBrown}`
+=======
+      backgroundColor: `${colors.lightBrown}`,
+      color: `${colors.darkBrown}`
+>>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
     };
   },
   multiValueLabel: (styles, { data }) => ({
@@ -57,6 +73,7 @@ export default class TagList extends React.Component {
       <div style={{ marginLeft: "30px" }}>
         <div
           style={{
+<<<<<<< HEAD
             display: "flex",
             borderBottom: `1px solid ${colors.brown}`,
             width: "300px"
@@ -72,6 +89,13 @@ export default class TagList extends React.Component {
               ? { display: "block", paddingTop: "25px" }
               : { display: "none", paddingTop: "25px" }
           }
+=======
+            display: "block",
+            paddingTop: "25px",
+            paddingLeft: "15px",
+            paddingBottom: "15px"
+          }}
+>>>>>>> 40f7d1912c04bc6e7dbeaa9edb498033b197b775
         >
           <Select
             options={filterList}
