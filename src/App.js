@@ -14,7 +14,7 @@ class App extends Component {
   componentWillMount = () => {
     initFire();
     createYearList();
-    const dataRef = firebase.database().ref("/");
+    const dataRef = firebase.database().ref("/shops/");
     let temp = [];
     dataRef.on("child_added", snapshot => {
       let item = snapshot.val();
