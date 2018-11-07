@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BottomBar from "./containers/bottom_bar";
-import SideMenu from "./containers/side_menu";
+import SideMenu from "./containers/Menus/side_menu";
 import MapContainer from "./containers/map_container";
 import * as firebase from "firebase";
 import { initFire } from "./store/firebase";
@@ -30,7 +30,8 @@ class App extends Component {
         type: item.data.store_type,
         name: item.data.store_name,
         isCorporate: item.data.corporate_ownership,
-        ethnicity: item.data.ethnic_ownership
+        ethnicity: item.data.ethnic_ownership,
+        collected: parseInt(item.data.year_data_collected, 10)
       });
       this.setState({ currStores: temp });
     });
