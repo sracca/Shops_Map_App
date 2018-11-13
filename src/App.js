@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BottomBar from "./containers/bottom_bar";
-import SideMenu from "./containers/Menus/side_menu";
+import SideMenu from "./containers/menus/side_menu";
 import MapContainer from "./containers/map_container";
 import * as firebase from "firebase";
 import { initFire } from "./store/firebase";
