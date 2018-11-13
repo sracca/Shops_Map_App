@@ -20,8 +20,29 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default class YearList extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    setMin: PropTypes.func.isRequired,
+    setMax: PropTypes.func.isRequired
   };
+
+  state = {
+    yearMin: null,
+    yearMax: null
+  };
+
+  handleMin = yearMin => {
+    this.setState({ yearMin });
+    this.props.setMin(this.state.yearMin);
+  };
+
+  handleMin = this.handleMin.bind(this);
+
+  handleMax = yearMax => {
+    this.setState({ yearMax });
+    this.props.setMax(this.state.yearMax);
+  };
+
+  handleMax = this.handleMax.bind(this);
 
   render() {
     return (
@@ -40,9 +61,19 @@ export default class YearList extends React.Component {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <YearContainer>
-            <Select options={allYears} isMulti={false} styles={yearSelect} />
+            <Select
+              options={allYears}
+              isMulti={false}
+              styles={yearSelect}
+              onChange={this.handleMin}
+            />
             <YearText> to </YearText>
-            <Select options={allYears} isMulti={false} styles={yearSelect} />
+            <Select
+              options={allYears}
+              isMulti={false}
+              styles={yearSelect}
+              onChange={this.handleMax}
+            />
           </YearContainer>
         </ExpansionPanelDetails>
       </ExpansionPanel>
